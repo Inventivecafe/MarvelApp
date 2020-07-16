@@ -6,13 +6,133 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+                <VideoView
+                    android:id="@+id/CoverVideo"
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp"
+                    android:paddingBottom="20dp" />
+
+
+                <Button
+                    android:id="@+id/uploadCoverVideo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/CoverVideo"
+                    android:background="#FA0C27"
+                    android:onClick="uploadCoverVideo"
+                    android:text="upload Cover Video"
+                    android:textColor="@android:color/background_dark"
+                    app:backgroundTint="#FB0B0B" />
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="5dp"
+            >
+
+            <TextView
+                android:id="@+id/YourName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:onClick="setName"
+                android:text="Your Name"
+                android:textColor="@color/cardview_dark_background"
+                android:textColorHighlight="#1B0101"
+                android:textColorLink="#0E0101"
+                android:textSize="30sp" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="5dp"
+            >
+
+            <TextView
+                android:id="@+id/languagesCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Languages"
+                android:textColor="#131313"
+                android:textColorHighlight="#151414"
+                android:textColorHint="#191818"
+                android:textColorLink="#121111"
+                android:textSize="22sp" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="5dp"
+            app:rippleColor="#FFFFFF">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/aboutMeText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="About Me"
+                    android:textColor="#090909"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/setAboutMe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/aboutMeText"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="8dp"
+                    android:onClick="setAboutMe"
+                    android:text="Enter about you"
+                    android:textColor="@color/cardview_dark_background" />
+
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/extFab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="#FA0C27"
+            android:text="book actor"
+            android:textColor="#FFFFFF"
+            app:backgroundTint="#FB0B0B" />
+
+    </LinearLayout>
+
+</ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
